@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.killzone.movavitest.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/toDetailFragmentt"
+            app:destination="@id/habrPostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habrPostDetailFragment"
+        android:name="com.killzone.movavitest.ui.HabrPostDetailFragment"
+        android:label="fragment_habr_post_detail"
+        tools:layout="@layout/fragment_habr_post_detail" >
+        <argument
+            android:name="habrPost"
+            app:argType="com.killzone.movavitest.model.ConvertedHabrPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/habrPostsListFragment"
+        android:name="com.killzone.movavitest.ui.HabrPostsListFragment"
+        android:label="HabrPostsListFragment" />
+</navigation>
